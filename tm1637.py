@@ -27,6 +27,7 @@ SOFTWARE.
 from micropython import const
 from machine import Pin
 from time import sleep_us, sleep_ms
+from math import modf
 
 TM1637_CMD1 = const(64)  # 0x40 data command
 TM1637_CMD2 = const(192) # 0xC0 address command
@@ -222,3 +223,10 @@ class TM1637Decimal(TM1637):
             segments[j] = self.encode_char(string[i])
             j += 1
         return segments
+
+    def integer(self, num):
+        self.show('{:>4}'.format(num))
+
+    def float(self, num):
+        dec_p, int_p = modf(num)
+        self.numbers(int(int_p), int(abs(dec_p*100)), True)

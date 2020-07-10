@@ -45,6 +45,10 @@ tm.numbers(12, 59)
 
 # show "-123"
 tm.number(-123)
+tm.integer(-123)
+
+# show "-7.34"
+tm.float(-7.34)
 
 # show temperature '24*C'
 tm.temperature(24)
@@ -170,6 +174,16 @@ Display a string on the display, scrolling from the right to left, speed adjusta
 String starts off-screen and scrolls until off-screen at 4 FPS by default.
 ```python
 scroll(string, delay=250)
+```
+
+Display an integer -999 through 9999, right aligned (alternative method to "number").
+```python
+integer(num)
+```
+
+Display an floating point number -9.99 through 99.99, right aligned.
+```python
+float(num)
 ```
 
 ## Parts

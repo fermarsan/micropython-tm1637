@@ -212,3 +212,7 @@ tm.temperature(-9)  # -9*C
 tm.temperature(5)   #  5*C
 tm.temperature(99)  # 99*C
 tm.temperature(100) # HI*C
+
+#integer and float
+tm.integer(1234)
+tm.float(3.14)
