@@ -158,6 +158,17 @@ Display 2 independent numbers on either side of the (optional) colon, with leadi
 numbers(num1, num2, colon=True)
 ```
 
+Display an integer -999 through 9999, right aligned (alternative method to "number").
+```python
+integer(num)
+```
+
+Display a floating point number -9.99 through 99.99, right aligned always with 2
+decimal digits.
+```python
+float(num)
+```
+
 Display a temperature -9 through 99 followed by degrees C.
 ```python
 temperature(num)
@@ -174,17 +185,6 @@ Display a string on the display, scrolling from the right to left, speed adjusta
 String starts off-screen and scrolls until off-screen at 4 FPS by default.
 ```python
 scroll(string, delay=250)
-```
-
-Display an integer -999 through 9999, right aligned (alternative method to "number").
-```python
-integer(num)
-```
-
-Display a floating point number -9.99 through 99.99, right aligned always with 2
-decimal digits.
-```python
-float(num)
 ```
 
 ## Parts

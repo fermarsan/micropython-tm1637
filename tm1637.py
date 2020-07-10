@@ -200,6 +200,13 @@ class TM1637(object):
             self.write(data[0+i:4+i])
             sleep_ms(delay)
 
+    def integer(self, num):
+        self.show('{:>4}'.format(num))
+
+    def float(self, num):
+        dec_p, int_p = modf(num)
+        self.numbers(int(int_p), int(abs(dec_p*100)), True)
+
 
 class TM1637Decimal(TM1637):
     """Library for quad 7-segment LED modules based on the TM1637 LED driver.
@@ -223,10 +230,3 @@ class TM1637Decimal(TM1637):
             segments[j] = self.encode_char(string[i])
             j += 1
         return segments
-
-    def integer(self, num):
-        self.show('{:>4}'.format(num))
-
-    def float(self, num):
-        dec_p, int_p = modf(num)
-        self.numbers(int(int_p), int(abs(dec_p*100)), True)
