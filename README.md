@@ -181,7 +181,7 @@ Display an integer -999 through 9999, right aligned (alternative method to "numb
 integer(num)
 ```
 
-Display an floating point number -9.99 through 99.99, right aligned always with 2
+Display a floating point number -9.99 through 99.99, right aligned always with 2
 decimal digits.
 ```python
 float(num)
